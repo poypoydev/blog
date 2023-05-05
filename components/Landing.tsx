@@ -70,7 +70,7 @@ const Landing: FC = () => {
               }}
               className="w-full text-center font-semibold text-2xl"
             >
-              What's up?
+              What&apos;s up?
             </motion.h2>
             <div className="flex flex-row items-center gap-3">
               <motion.h1
@@ -87,7 +87,7 @@ const Landing: FC = () => {
                 }}
                 className="font-bold text-4xl my-4"
               >
-                I'm{" "}
+                I&apos;m{" "}
               </motion.h1>
               <motion.h1
                 initial={{

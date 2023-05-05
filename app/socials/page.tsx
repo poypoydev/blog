@@ -34,8 +34,9 @@ const Page: NextPage = () => {
         Here are links to my social media accounts.
       </h1>
       <div className="flex flex-wrap justify-center gap-4 mt-4">
-        {socialMedias.map((socialMedia) => (
+        {socialMedias.map((socialMedia, index) => (
           <Link
+            key={index}
             href={socialMedia.url}
             className="border inline-flex gap-3 p-4 rounded-md"
           >
