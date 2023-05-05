@@ -1,13 +1,14 @@
-const Page = ({}) => {
-  async function increment() {
-    "use server";
-    console.log("increment");
-  }
+import HomeLayout from "@/components/HomeLayout";
+import Landing from "@/components/Landing";
+import Navigation from "@/components/Navigation";
+import Posts from "@/components/Posts";
 
+const Page = ({}) => {
   return (
-    <form action={increment}>
-      <button type="submit">Like</button>
-    </form>
+    <>
+      <Landing />
+      <HomeLayout center={false}></HomeLayout>
+    </>
   );
 };
 
