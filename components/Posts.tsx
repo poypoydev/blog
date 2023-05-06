@@ -65,6 +65,7 @@ const Posts = () => {
         {data.map((val) => {
           return (
             <motion.div
+              key={val._id}
               onClick={() => router.push(val.url)}
               variants={child}
               className={` py-2   w-full items-center inline-flex justify-between  border-t last:border-y `}

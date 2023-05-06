@@ -65,9 +65,8 @@ const Page: NextPage = () => {
         className="flex flex-wrap justify-center gap-4 mt-4"
       >
         {socialMedias.map((socialMedia, index) => (
-          <motion.div variants={child}>
+          <motion.div key={index} variants={child}>
             <Link
-              key={index}
               href={socialMedia.url}
               className="border inline-flex gap-3 p-4 rounded-md"
             >
