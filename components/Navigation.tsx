@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 import { FC } from "react";
 
-const Navigation: FC = () => {
+const Navigation: FC<{ delay?: number }> = ({ delay = 0 }) => {
   const router = usePathname();
   const setStage = useCurrentStage((state) => state.setStage);
   console.log(router);
@@ -15,7 +15,8 @@ const Navigation: FC = () => {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{
-        delay: 0.5,
+        // delay: 0.2,
+        delay: delay,
         duration: 0.4,
         type: "easeOut",
       }}
@@ -25,7 +26,7 @@ const Navigation: FC = () => {
         initial={{ x: -30, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{
-          delay: 0.5,
+          delay: delay,
           duration: 0.4,
           type: "easeOut",
         }}
@@ -39,7 +40,7 @@ const Navigation: FC = () => {
         initial={{ x: 30, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{
-          delay: 0.5,
+          delay: delay,
           duration: 0.4,
           type: "easeOut",
         }}

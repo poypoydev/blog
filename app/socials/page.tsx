@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import HomeLayout from "@/components/HomeLayout";
 import Navigation from "@/components/Navigation";
 import { Github, Instagram, Twitch, Twitter } from "lucide-react";
@@ -26,6 +28,29 @@ const socialMedias = [
     icon: <Twitch />,
   },
 ];
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const child = {
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "easeOut",
+    },
+  },
+  hidden: {
+    y: 30,
+    opacity: 0,
+  },
+};
 
 const Page: NextPage = () => {
   return (
@@ -33,18 +58,25 @@ const Page: NextPage = () => {
       <h1 className="font-semibold text-2xl mt-9 text-center mx-5  ">
         Here are links to my social media accounts.
       </h1>
-      <div className="flex flex-wrap justify-center gap-4 mt-4">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="flex flex-wrap justify-center gap-4 mt-4"
+      >
         {socialMedias.map((socialMedia, index) => (
-          <Link
-            key={index}
-            href={socialMedia.url}
-            className="border inline-flex gap-3 p-4 rounded-md"
-          >
-            {socialMedia.icon}
-            <h1>{socialMedia.name}</h1>
-          </Link>
+          <motion.div variants={child}>
+            <Link
+              key={index}
+              href={socialMedia.url}
+              className="border inline-flex gap-3 p-4 rounded-md"
+            >
+              {socialMedia.icon}
+              <h1>{socialMedia.name}</h1>
+            </Link>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </HomeLayout>
   );
 };

@@ -25,7 +25,7 @@ const HomeLayout: FC<HomeLayoutProps> = ({
     >
       {(stage === 2 || bypass) && (
         <>
-          <Navigation />
+          <Navigation delay={bypass ? 0 : 0.5} />
 
           {children}
         </>
