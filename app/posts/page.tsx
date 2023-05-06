@@ -17,7 +17,7 @@ const Page = ({}) => {
           >
             Latest blog posts
           </motion.h1> */}
-          {/* @ts-expect-error Async Server Component */}
+
           <Posts />
         </div>
       </HomeLayout>
