@@ -20,6 +20,7 @@ const container = {
     opacity: 1,
     transition: {
       staggerChildren: 0.35,
+      delay: 0.5,
     },
   },
 };
@@ -54,6 +55,7 @@ const Posts = () => {
           opacity: 1,
           transition: {
             type: "easeOut",
+            delay: 0.5,
           },
         }}
         className="font-semibold text-2xl my-5"

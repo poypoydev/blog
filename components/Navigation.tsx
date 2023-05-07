@@ -48,10 +48,10 @@ const Navigation: FC<{ delay?: number }> = ({ delay = 0 }) => {
       >
         <li
           className={` ${
-            router.includes("posts") ? "border-black/40 border" : ""
+            router === "/" ? "border-black/40 border" : ""
           } p-2 rounded-md`}
         >
-          <Link href="/posts">
+          <Link href="/">
             <ScrollText />
           </Link>
         </li>
