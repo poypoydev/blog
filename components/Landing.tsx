@@ -39,9 +39,9 @@ const Landing: FC = () => {
             type: "easeOut",
             delay: 1,
           }}
-          className="font-semibold text-6xl text-white"
+          className="font-semibold text-center text-4xl md:text-6xl text-white"
         >
-          Ready?
+          Welcome to my blog.
         </motion.h1>
       </motion.div>
       {/*  */}

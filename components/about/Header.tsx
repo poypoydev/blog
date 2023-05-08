@@ -15,7 +15,7 @@ const Header = ({}) => {
         opacity: 1,
         y: 0,
       }}
-      className="w-full h-[25%] rounded-md border-y"
+      className="w-full h-[25%] md:h-[40%] rounded-md border-y"
       style={{
         backgroundImage: `url(./pf.jpeg)`,
         backgroundSize: "99%",

@@ -62,15 +62,6 @@ const Navigation: FC<{ delay?: number }> = ({ delay = 0 }) => {
             <PersonStanding />
           </Link>
         </li>
-        <li
-          className={` ${
-            router.includes("socials") ? "border-black/40 border" : ""
-          } p-2 rounded-md`}
-        >
-          <Link href="/socials">
-            <Globe />
-          </Link>
-        </li>
       </motion.ul>
     </motion.nav>
   );

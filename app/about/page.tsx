@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Header from "@/components/about/Header";
 import { NextPage } from "next";
 import Link from "next/link";
+import Social from "@/components/Socials";
 
 const container = {
   hidden: {
@@ -42,7 +43,6 @@ const Page: NextPage = () => {
         initial="hidden"
         className=" h-full  mx-4"
       >
-        <Header />
         <motion.h1
           variants={children}
           className="text-center font-bold text-4xl my-8"
@@ -50,7 +50,10 @@ const Page: NextPage = () => {
           Who am I?
         </motion.h1>
 
-        <motion.p variants={children} className="my-3 text-center">
+        <motion.p
+          variants={children}
+          className="my-3 md:mx-[25%] md:border md:p-4 rounded-md text-center"
+        >
           My name is{" "}
           <span className="underline underline-offset-2 pb-3">
             Poyraz Birbil.
@@ -60,17 +63,16 @@ const Page: NextPage = () => {
           Netherlands. I enjoy web design and development and am interested in
           technologies such as React, Solid and Next.{" "}
         </motion.p>
-        <Link
-          className="text-center rounded-full mt-8 border px-3 py-2"
-          href={"https://poypoy.dev"}
+        <motion.p
+          variants={children}
+          className=" md:mx-[25%] text-center bg-black text-white rounded-md my-4 border px-3 py-4"
         >
-          <motion.p
-            variants={children}
-            className="rounded-full border px-4 py-2"
-          >
-            If you want to contact me, check out my portfolio site.
-          </motion.p>
-        </Link>
+          <Link href={"https://poypoy.dev"}>
+            If you want to contact me, check out my socials below, or click this
+            button to visit my website.
+          </Link>
+        </motion.p>
+        <Social />
       </motion.div>
     </HomeLayout>
   );

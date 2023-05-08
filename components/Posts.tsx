@@ -58,12 +58,17 @@ const Posts = () => {
             delay: 0.5,
           },
         }}
-        className="font-semibold text-2xl my-5"
+        className="font-semibold md:text-4xl md:my-9 text-2xl my-5"
       >
         Latest blog posts
       </motion.h1>
 
-      <motion.div variants={container} initial="hidden" animate="show">
+      <motion.div
+        className="w-full"
+        variants={container}
+        initial="hidden"
+        animate="show"
+      >
         {data.map((val) => {
           return (
             <motion.div
