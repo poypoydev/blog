@@ -32,9 +32,7 @@ const Navigation: FC<{ delay?: number }> = ({ delay = 0 }) => {
         }}
         className="font-bold text-3xl ml-4"
       >
-        <Link onClick={() => setStage(2)} href="/">
-          Poyraz
-        </Link>
+        Poyraz
       </motion.h1>
       <motion.ul
         initial={{ x: 30, opacity: 0 }}
@@ -51,7 +49,7 @@ const Navigation: FC<{ delay?: number }> = ({ delay = 0 }) => {
             router === "/" ? "border-black/40 border" : ""
           } p-2 rounded-md`}
         >
-          <Link href="/">
+          <Link onClick={() => setStage(2)} href="/">
             <ScrollText />
           </Link>
         </li>
