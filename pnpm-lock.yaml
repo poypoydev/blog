@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@kodingdotninja/use-tailwind-breakpoint':
+    specifier: ^0.0.5
+    version: 0.0.5(react@18.2.0)
   '@types/node':
     specifier: 18.16.3
     version: 18.16.3
@@ -617,6 +620,17 @@ packages:
     dependencies:
       jsbi: 4.3.0
       tslib: 2.5.0
+    dev: false
+
+  /@kodingdotninja/use-tailwind-breakpoint@0.0.5(react@18.2.0):
+    resolution: {integrity: sha512-7h52zL+l+14u9diyjVcGoS5NRIwrc6euIGlHDwtJXlrR3h31RNyTrOfimy7PJTvS4fFdNgbzyrNcGfhj3sDRfQ==}
+    peerDependencies:
+      react: '>=16.8'
+    peerDependenciesMeta:
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@mdx-js/esbuild@2.3.0(esbuild@0.17.18):

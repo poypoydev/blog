@@ -91,8 +91,9 @@ const Posts = () => {
                 <div
                   className="w-6 h-6 rounded-full border"
                   style={{
-                    backgroundImage: `url(https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1752&q=80)`,
+                    backgroundImage: `url(./pf.jpeg)`,
                     backgroundSize: "cover",
+                    backgroundPositionY: "60%",
                   }}
                 />
                 <h2>{val.author}</h2>

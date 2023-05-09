@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import HomeLayout from "@/components/HomeLayout";
-import Navigation from "@/components/Navigation";
-import Header from "@/components/about/Header";
+
 import { NextPage } from "next";
 import Link from "next/link";
 import Social from "@/components/Socials";
+import { useBreakpoint } from "@/helpers/hooks";
 
 const container = {
   hidden: {
@@ -35,13 +35,14 @@ const children = {
 };
 
 const Page: NextPage = () => {
+  const breakPoint = useBreakpoint("sm");
   return (
     <HomeLayout bypass center={false}>
       <motion.div
         variants={container}
         animate="animate"
         initial="hidden"
-        className=" h-full  mx-4"
+        className=" h-full   mx-4"
       >
         <motion.h1
           variants={children}
@@ -63,13 +64,15 @@ const Page: NextPage = () => {
           Netherlands. I enjoy web design and development and am interested in
           technologies such as React, Solid and Next.{" "}
         </motion.p>
+
         <motion.p
           variants={children}
           className=" md:mx-[25%] text-center bg-black text-white rounded-md my-4 border px-3 py-4"
         >
           <Link href={"https://poypoy.dev"}>
-            If you want to contact me, check out my socials below, or click this
-            button to visit my website.
+            {breakPoint
+              ? "  If you want to contact me, check out my socials below, or click this button to visit my website."
+              : "Visit my website."}
           </Link>
         </motion.p>
         <Social />
