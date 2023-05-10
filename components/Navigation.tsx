@@ -32,7 +32,7 @@ const Navigation: FC<{ delay?: number }> = ({ delay = 0 }) => {
         }}
         className="font-bold text-3xl ml-4"
       >
-        Poyraz
+        <Link href="/">Poyraz</Link>
       </motion.h1>
       <motion.ul
         initial={{ x: 30, opacity: 0 }}
@@ -46,19 +46,32 @@ const Navigation: FC<{ delay?: number }> = ({ delay = 0 }) => {
       >
         <li
           className={` ${
-            router === "/" ? "border-black/40 border" : ""
-          } p-2 rounded-md`}
+            router === "/" || router.includes("posts")
+              ? "border-black/40 border text-black  "
+              : "text-black/50"
+          } p-2    rounded-md`}
         >
-          <Link onClick={() => setStage(2)} href="/">
+          <Link
+            onClick={() => setStage(2)}
+            className="inline-flex gap-1"
+            href="/"
+          >
+            <p>Blog</p>
             <ScrollText />
           </Link>
         </li>
         <li
           className={` ${
-            router.includes("about") ? "border-black/40 border" : ""
-          } p-2 rounded-md`}
+            router === "/about"
+              ? "border-black/40 text-black border"
+              : "text-black/50"
+          } p-2 rounded-md  `}
         >
-          <Link href="/about">
+          <Link
+            href="/about"
+            className="inline-flex items-center gap-2 md:gap-1"
+          >
+            <p>About me</p>
             <PersonStanding />
           </Link>
         </li>

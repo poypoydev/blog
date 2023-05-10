@@ -6,6 +6,16 @@ const nextConfig = {
     appDir: true,
     serverActions: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/*",
+      },
+    ],
+  },
 };
 
 module.exports = withContentlayer(nextConfig);

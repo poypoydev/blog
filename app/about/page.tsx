@@ -6,7 +6,6 @@ import HomeLayout from "@/components/HomeLayout";
 import { NextPage } from "next";
 import Link from "next/link";
 import Social from "@/components/Socials";
-import { useBreakpoint } from "@/helpers/hooks";
 
 const container = {
   hidden: {
@@ -35,7 +34,6 @@ const children = {
 };
 
 const Page: NextPage = () => {
-  const breakPoint = useBreakpoint("sm");
   return (
     <HomeLayout bypass center={false}>
       <motion.div
@@ -69,11 +67,7 @@ const Page: NextPage = () => {
           variants={children}
           className=" md:mx-[25%] text-center bg-black text-white rounded-md my-4 border px-3 py-4"
         >
-          <Link href={"https://poypoy.dev"}>
-            {breakPoint
-              ? "  If you want to contact me, check out my socials below, or click this button to visit my website."
-              : "Visit my website."}
-          </Link>
+          <Link href={"https://poypoy.dev"}>Visit my portfolio website.</Link>
         </motion.p>
         <Social />
       </motion.div>

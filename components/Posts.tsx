@@ -1,8 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-import { allPosts } from "@/.contentlayer/generated";
+import { allPosts, type Post } from "@/.contentlayer/generated";
 import { compareDesc, parseISO, format } from "date-fns";
 import { useRouter } from "next/navigation";
+import { use } from "react";
 
 function getData() {
   const data = allPosts.sort((a, b) => {
@@ -19,7 +20,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.6,
+      staggerChildren: 0.5,
       delay: 0.5,
     },
   },

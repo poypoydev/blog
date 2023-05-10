@@ -3,6 +3,7 @@ import Link from "next/link";
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import HomeLayout from "@/components/HomeLayout";
+import { MDXComponents } from "@/components/mdx/MDXComponents";
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
@@ -35,8 +36,8 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
             </p>
           </div>
         </div>
-        <div className="mx-5 text-center">
-          <Content />
+        <div className="mx-8 md:mx-[10%]  prose">
+          <Content components={MDXComponents} />
         </div>
       </article>
     </HomeLayout>
